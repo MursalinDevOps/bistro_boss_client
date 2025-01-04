@@ -1,5 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const links = (
@@ -56,6 +56,9 @@ const Navbar = () => {
                         <p className="text-xl">
                             <FaShoppingCart></FaShoppingCart>
                         </p>
+                        <Link to='/signIn' className="text-green-700 underline">
+                        Sign In
+                        </Link>
                         <div className="avatar placeholder">
                             <div className="bg-neutral text-neutral-content w-10 rounded-full">
                                 <span className="text-xs">User</span>
