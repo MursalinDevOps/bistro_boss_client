@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../pages/shared/footer/Footer";
 
-const Main = () => {
+const Root = () => {
     return (
         <div>
             <nav>
@@ -10,10 +11,10 @@ const Main = () => {
                 <Outlet></Outlet>
             </section>
             <footer>
-
+                <Footer></Footer>
             </footer>
         </div>
     );
 };
 
-export default Main;
+export default Root;
