@@ -1,10 +1,10 @@
 import Cover from "../../shared/cover/Cover";
 import MenuItem from "../../shared/menuItem/MenuItem";
 
-const MenuCategory = ({ items, heading, coverImg }) => {
+const MenuCategory = ({ items, heading, coverImg , subHeading }) => {
     return (
         <div>
-            {heading && <Cover heading="Desserts" subHeading="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." bgImg={coverImg}></Cover>}
+            {heading && <Cover heading={heading} subHeading={subHeading} bgImg={coverImg}></Cover>}
             <div className="mb-12">
                 <div className="gap-5 grid md:grid-cols-2">
                     {
