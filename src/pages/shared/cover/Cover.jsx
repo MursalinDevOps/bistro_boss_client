@@ -2,7 +2,7 @@ const Cover = ({bgImg, heading, subHeading}) => {
     return (
         <div className="mb-12">
             <div
-                className="hero h-[850px]"
+                className="hero h-[700px]"
                 style={{
                     backgroundImage: `url("${bgImg}")`,
                 }}>
