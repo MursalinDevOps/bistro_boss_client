@@ -4,6 +4,7 @@ import menuBg from "../../assets/menu/banner3.jpg";
 import useMenu from '../../hooks/useMenu';
 import SectionTitle from '../../components/SectionTitle';
 import MenuCategory from './menuCategory/MenuCategory';
+import dessertCover from "../../assets/menu/dessert-bg.jpeg";
 const Menu = () => {
     const [menu] = useMenu();
     const offeredMenu = menu.filter(item => item.category === "offered");
@@ -16,11 +17,19 @@ const Menu = () => {
             <Helmet>
                 <title>Bistro Boss | Menu</title>
             </Helmet>
+            {/* MAIN COVER */}
             <section>
                 <Cover bgImg={menuBg} heading="Our menu" subHeading="Would you like to try a dish?"></Cover>
             </section>
+            {/* OFFERED */}
+            <section>
             <SectionTitle title="today's offer" subTitle="---Don't Miss---"></SectionTitle>
             <MenuCategory items={offeredMenu}></MenuCategory>
+            </section>
+            {/* DESSERT */}
+            <section>
+            <MenuCategory heading="Dessert" coverImg={dessertCover}  items={dessertMenu}></MenuCategory>
+            </section>
         </div>
     );
 };
